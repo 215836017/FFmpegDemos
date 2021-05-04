@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         System.loadLibrary("swresample-2");
         System.loadLibrary("swscale-4");
 
-        动态库没有load也可以运行
+        动态库没有load也可以运
         */
         System.loadLibrary("native-lib");
     }
