@@ -39,6 +39,10 @@ set_target_properties(swresample PROPERTIES IMPORTED_LOCATION ${LOCAL_SHARE_PATH
 add_library(swscale SHARED IMPORTED)
 set_target_properties(swscale PROPERTIES IMPORTED_LOCATION ${LOCAL_SHARE_PATH}/libswscale.so)
 
+# if have a static lib
+#add_library( yuv STATIC IMPORTED )
+#set_target_properties( yuv PROPERTIES IMPORTED_LOCATION ${LOCAL_SHARE_PATH}/static/libyuv.a )
+
 target_link_libraries(
         native-lib
         avcodec

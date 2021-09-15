@@ -19,8 +19,20 @@ find_library(
 
         log)
 
-target_link_libraries(
-        native-lib
+#第一种形式：
+#target_link_libraries(
+#        native-lib
+#        avcodec
+#        avdevice
+#        avfilter
+#        avformat
+#        avutil
+#        swresample
+#        swscale
+#        ${log-lib})
+
+#第二种形式：
+set(FFmpeglib
         avcodec
         avdevice
         avfilter
@@ -28,4 +40,8 @@ target_link_libraries(
         avutil
         swresample
         swscale
+        )
+target_link_libraries(
+        native-lib
+        ${FFmpeglib}
         ${log-lib})
