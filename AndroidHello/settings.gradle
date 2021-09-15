@@ -1,2 +1,3 @@
 rootProject.name = "AndroidHello"
 include ':app'
+include ':app2'
